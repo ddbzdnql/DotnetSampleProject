@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 
 using SportsStore.Models;
@@ -27,8 +28,12 @@ namespace SportsStore
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<MyDbContext>(options =>{
-                options.UseSqlServer(Configuration["Data:SportStoreProducts:ConnectionString"]);
+            services.AddDbContextPool<MyDbContext>(
+                options => {
+                    options.UseMySql(
+                        Configuration["Data:SportStoreProducts:ConnectionString"],
+                        mySqlOptions => { mySqlOptions.ServerVersion(new Version(10, 1, 38), ServerType.MariaDb); }
+                    );
                 }
             );
             services.AddTransient<IProductRepository, EFProductRepository>();

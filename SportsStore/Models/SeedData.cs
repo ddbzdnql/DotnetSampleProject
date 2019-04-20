@@ -13,6 +13,7 @@ namespace SportsStore.Models{
                     ctx.Products.AddRange(
                         new Product
                         {
+                            //ProductID = 1,
                             Name = "Kayak",
                             Description = "A boat for one person",
                             Category = "Watersports",
@@ -20,6 +21,7 @@ namespace SportsStore.Models{
                         },
                     new Product
                     {
+                        //ProductID = 2,
                         Name = "Lifejacket",
                         Description = "Protective and fashionable",
                         Category = "Watersports",
@@ -27,6 +29,7 @@ namespace SportsStore.Models{
                     },
                     new Product
                     {
+                        //ProductID = 3,
                         Name = "Soccer Ball",
                         Description = "FIFA-approved size and weight",
                         Category = "Soccer",
@@ -34,6 +37,7 @@ namespace SportsStore.Models{
                     },
                     new Product
                     {
+                        //ProductID = 4,
                         Name = "Corner Flags",
                         Description = "Give your playing field a professional touch",
                         Category = "Soccer",
@@ -41,6 +45,7 @@ namespace SportsStore.Models{
                     },
                     new Product
                     {
+                        //ProductID = 5,
                         Name = "Stadium",
                         Description = "Flat-packed 35,000-seat stadium",
                         Category = "Soccer",
@@ -48,6 +53,7 @@ namespace SportsStore.Models{
                     },
                     new Product
                     {
+                        //ProductID = 6,
                         Name = "Thinking Cap",
                         Description = "Improve brain efficiency by 75%",
                         Category = "Chess",
@@ -55,6 +61,7 @@ namespace SportsStore.Models{
                     },
                     new Product
                     {
+                        //ProductID = 7,
                         Name = "Unsteady Chair",
                         Description = "Secretly give your opponent a disadvantage",
                         Category = "Chess",
